@@ -34,8 +34,8 @@ def callback():
 @handler.add(MessageEvent, message=TextMessage)
 def handle_message(event):
     message = TextSendMessage(text=event.message.text)
-    if(message.find("吉娃娃") >= 0)
-    line_bot_api.reply_message(event.reply_token, message)
+    if event.message.text.find("吉娃娃") >= 0:
+        line_bot_api.reply_message(event.reply_token, text = "老子是地表最會睡吉娃娃")
 
 import os
 if __name__ == "__main__":
