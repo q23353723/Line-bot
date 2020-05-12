@@ -36,7 +36,6 @@ def learnMenu():
               {
                 "type": "text",
                 "text": "按確定後請先輸入關鍵字再輸入回應字",
-                "wrap": true,
                 "color": "#666666",
                 "size": "sm",
                 "flex": 5
