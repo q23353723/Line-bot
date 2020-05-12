@@ -33,8 +33,9 @@ data = []
 postgres_select_query = f"""SELECT * FROM vocabulary;"""
     
 cursor.execute(postgres_select_query)
-raw = cursor.fetchmany(int(2))
+raw = cursor.fetchmany(int(99999))
 message = []
+#message.append(cursor.fetchall())
 
 for i in raw:
     message.append((i[0], i[1]))

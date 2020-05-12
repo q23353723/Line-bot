@@ -9,6 +9,15 @@ conn = psycopg2.connect(database="d257c3vevk7b15",user="uvvzexnmjjixeq",password
 
 cursor = conn.cursor()
 
+postgres_select_query = f"""SELECT * FROM vocabulary;"""
+    
+cursor.execute(postgres_select_query)
+raw = cursor.fetchmany(int(99999))
+message = []
+
+for i in raw:
+    message.append((i[0], i[1]))
+
 def addVocabulary(k, r):
     cursor.execute("INSERT INTO vocabulary (keyword, response) VALUES (k, r)")
 
