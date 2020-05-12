@@ -8,8 +8,8 @@ from linebot.exceptions import (
 )
 from linebot.models import *
 
-import dbcontroller *
-import message *
+from dbcontroller import *
+from message import *
 
 app = Flask(__name__)
 
