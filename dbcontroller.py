@@ -19,6 +19,13 @@ def searchVocabulary(k):
             return i[1]
     return "聽不懂"
 
+def existVocabulary(k):
+    postgres_select_query = f"""SELECT * FROM vocabulary;"""
+    for i in message:
+        if (i[0] == k):
+            return True
+    return False
+
 
 conn.commit()
 

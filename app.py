@@ -39,9 +39,9 @@ def handle_message(event):
     message = TextSendMessage(text=event.message.text)
     messageList = []
 
-    if searchVocabulary(event.message.text):
+    if existVocabulary(event.message.text):
         #messageList.append("老子是地表最會睡吉娃娃")
-        line_bot_api.reply_message(event.reply_token, TextSendMessage(text = event.message.text))
+        line_bot_api.reply_message(event.reply_token, TextSendMessage(text = searchVocabulary(event.message.text)))
     if event.message.text == "學詞語":
         line_bot_api.reply_message(event.reply_token, FlexSendMessage(alt_text = 'index', contents = learnMenu()))
     
