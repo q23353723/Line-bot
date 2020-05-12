@@ -19,7 +19,7 @@ for i in raw:
     message.append((i[0], i[1]))
 
 def addVocabulary(k, r):
-    cursor.execute("INSERT INTO vocabulary (keyword, response) VALUES (k, r)")
+    cursor.execute("INSERT INTO vocabulary (keyword, response) VALUES(%s, %s)",[k, r])
 
 def searchVocabulary(k):
     postgres_select_query = f"""SELECT * FROM vocabulary;"""

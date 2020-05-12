@@ -49,6 +49,7 @@ def handle_message(event):
         keyword = received_text[0:semicolon_index]
         message = received_text[semicolon_index+1:]
         addVocabulary(keyword, message)
+        
     
     
 
