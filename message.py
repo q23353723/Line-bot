@@ -80,7 +80,3 @@ def learnMenu():
     "flex": 0
   }
 }
-FlexSendMessage(
-    alt_text = '新增詞語',
-    contents = 你在Flex Message Simulator寫出來的程式碼
-)
