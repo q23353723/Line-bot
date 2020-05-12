@@ -21,7 +21,6 @@ def addVocabulary(k, r):
     conn = getConnect()
     cursor = conn.cursor()
     cursor.execute("INSERT INTO vocabulary (keyword, response) VALUES(%s, %s)",[k, r])
-    cursor.close()
     conn.close()
 
 def searchVocabulary(k):
@@ -30,10 +29,8 @@ def searchVocabulary(k):
     postgres_select_query = f"""SELECT * FROM vocabulary;"""
     for i in message:
         if (i[0] == k):
-            cursor.close()
             conn.close()
             return i[1]
-    cursor.close()
     conn.close()
     return "聽不懂"
 
@@ -43,9 +40,7 @@ def existVocabulary(k):
     postgres_select_query = f"""SELECT * FROM vocabulary;"""
     for i in message:
         if (i[0] == k):
-            cursor.close()
             conn.close()
             return True
-    cursor.close()
     conn.close()
     return False
