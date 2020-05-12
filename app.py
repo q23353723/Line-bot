@@ -41,8 +41,8 @@ def handle_message(event):
 
     if event.message.text == "吉娃娃":
         line_bot_api.reply_message(event.reply_token, TextSendMessage(text = "老子是地表最會睡吉娃娃"))
-    if event.message.text == "學詞語":
-        line_bot_api.reply_message(event.reply_token, FlexSendMessage(alt_text = 'index', contents = learnMenu())
+    #if event.message.text == "學詞語":
+    #    line_bot_api.reply_message(event.reply_token, FlexSendMessage(alt_text = 'index', contents = learnMenu())
 
 import os
 if __name__ == "__main__":
