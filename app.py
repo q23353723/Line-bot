@@ -44,12 +44,12 @@ def handle_message(event):
     if event.message.text == "學詞語":
         line_bot_api.reply_message(event.reply_token, FlexSendMessage(alt_text = 'index', contents = learnMenu()))
     if event.message.text[0:6] == "吉娃娃學說話;":
-        received_text = st[7:]
+        received_text = event.message.text[7:]
         semicolon_index = received_text.index(';')
         keyword = received_text[0:semicolon_index]
         message = received_text[semicolon_index+1:]
         addVocabulary(keyword, message)
-        
+
     
     
 
