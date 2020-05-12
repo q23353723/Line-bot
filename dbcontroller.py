@@ -17,7 +17,7 @@ def searchVocabulary(k):
     for i in message:
         if (i[0] == k):
             return i[1]
-    return False
+    return "聽不懂"
 
 
 conn.commit()
