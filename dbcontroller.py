@@ -21,6 +21,7 @@ def addVocabulary(k, r):
     conn = getConnect()
     cursor = conn.cursor()
     cursor.execute("INSERT INTO vocabulary (keyword, response) VALUES(%s, %s)",[k, r])
+    message.append(k, r)
     conn.close()
 
 def searchVocabulary(k):
