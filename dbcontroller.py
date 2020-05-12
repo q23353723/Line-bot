@@ -27,6 +27,7 @@ def searchVocabulary(k):
     conn = getConnect()
     cursor = conn.cursor()
     postgres_select_query = f"""SELECT * FROM vocabulary;"""
+    cursor.execute(postgres_select_query)
     for i in message:
         if (i[0] == k):
             conn.close()
@@ -38,6 +39,7 @@ def existVocabulary(k):
     conn = getConnect()
     cursor = conn.cursor()
     postgres_select_query = f"""SELECT * FROM vocabulary;"""
+    cursor.execute(postgres_select_query)
     for i in message:
         if (i[0] == k):
             conn.close()
