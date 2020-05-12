@@ -1,5 +1,5 @@
 import os
-import psycopg2
+from psycopg2 import *
 
 DATABASE_URL = os.popen('heroku config:get DATABASE_URL -a chihuahua-line-bot').read()[:-1]
 
