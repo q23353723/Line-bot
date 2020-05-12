@@ -18,9 +18,9 @@ SQL_order = '''CREATE TABLE vocabulary(
 #cursor.execute("SELECT keyword, response FROM vocabulary")
 #cursor.execute("SELECT keyword, response FROM information_schema.columns WHERE table_name = 'vocabulary'")
 #cursor.execute("INSERT INTO vocabulary (keyword, response) VALUES ('卑鄙', '卑鄙源之助')")
-key = "台北"
-res = "暴徒"
-cursor.execute("INSERT INTO vocabulary (keyword, response) VALUES(%s, %s)",[key, res])
+#key = "台北"
+#res = "暴徒"
+#cursor.execute("INSERT INTO vocabulary (keyword, response) VALUES(%s, %s)",[key, res])
 
 data = []
 '''while True:
